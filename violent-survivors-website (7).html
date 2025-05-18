@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violent Survivors - Epic Monster Survival Game | Play Online</title>
+    <meta name="description" content="Violent Survivors is an action-packed monster survival game where you battle hordes of enemies, collect power-ups, and fight to be the last one standing.">
+    <link rel="canonical" href="https://violentsurvivors.com">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Violent Survivors - Epic Monster Survival Game">
+    <meta property="og:description" content="Battle hordes of monsters, collect power-ups, and survive in this action-packed online game.">
+    <meta property="og:url" content="https://violentsurvivors.com">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @layer base {
+            @font-face {
+                font-family: 'Gaming';
+                src: url('https://fonts.cdnfonts.com/css/crackman');
+                font-weight: 400;
+                font-style: normal;
+            }
+            
+            html {
+                scroll-behavior: smooth;
+            }
+            
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: #0a0a0a;
+                color: #e0e0e0;
+            }
+            
+            .gaming-font {
+                font-family: 'Gaming', 'Impact', sans-serif;
+            }
+            
+            .text-glow {
+                text-shadow: 0 0 10px rgba(239, 68, 68, 0.7), 0 0 20px rgba(239, 68, 68, 0.5);
+            }
+            
+            .text-glow-blue {
+                text-shadow: 0 0 10px rgba(59, 130, 246, 0.7), 0 0 20px rgba(59, 130, 246, 0.5);
+            }
+            
+            .box-glow {
+                box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+            }
+            
+            .box-glow-blue {
+                box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+            }
+            
+            .hero-gradient {
+                background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            }
+            
+            .btn-hover {
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+            }
+            
+            .btn-hover:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                transition: 0.5s;
+                z-index: -1;
+            }
+            
+            .btn-hover:hover:before {
+                left: 100%;
+            }
+            
+            .neo-brutalism {
+                border: 3px solid #000;
+                box-shadow: 5px 5px 0px #000;
+            }
+            
+            .card-game {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .card-game:hover {
+                transform: translateY(-10px);
+            }
+            
+            .feature-card {
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                background: rgba(30, 30, 30, 0.6);
+                backdrop-filter: blur(10px);
+                transition: all 0.3s ease;
+            }
+            
+            .feature-card:hover {
+                border-color: rgba(239, 68, 68, 0.5);
+                box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+                transform: translateY(-5px);
+            }
+            
+            .grid-bg {
+                background-image: 
+                    linear-gradient(rgba(30, 30, 30, 0.3) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(30, 30, 30, 0.3) 1px, transparent 1px);
+                background-size: 20px 20px;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGCSURBVFhH7ZY9TsNAEIWdH4lDcAMkWnIBzkBJgxAVoqOBC0BLwQ1oKWjpKLgCLT0VEnCBKDQ0SAn4eTN+JGuRFcdOQQqf9GntzM6+2fVYXmVhYaGMjuAFvIfv8A0ewRM4kKlVbTVDodVG4Sm8hJ/wL+EHvIFKVLU9qA2+Cmmi40nYF+Qd9gy5S+vA10HdLUUlGIX3cG7UrwW7GzuwC1/h3OQe/JSAA/4CF7JR1KFNqwWPzw04YP+fYT8l4Fm/gSsZDKJda3V47Yg3JuDKV/JhOpBsGHlqvTCHRybQqleycaQjyUah9cJtQokJ9Mmt5MPQY3lqLefgXXRTArrknXyYHdmMYiQrfQnIVtabRDaKYdcTfAno2TWSjaIPX/kuRb8JKFnyUQJyK15LNsw1XMpm0XKDZNxm01/CDryAehEVkk2ij9v6WtoGVFhfMnGPP4m0kGxlG4KTBxnUi4aTqAeHsik6eOCVV0i2cPBx8QRaNvgy6sHSPnH/kcoKiGWHYM+cxdQAAAAASUVORK5CYII=">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-black/70 border-b border-red-600/30">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-md flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">VS</span>
+                    </div>
+                    <span class="gaming-font text-2xl text-white text-glow">VIOLENT SURVIVORS</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#game" class="text-white hover:text-red-500 transition-all duration-300 font-medium">PLAY NOW</a>
+                    <a href="#about" class="text-white hover:text-red-500 transition-all duration-300 font-medium">ABOUT</a>
+                    <a href="#features" class="text-white hover:text-red-500 transition-all duration-300 font-medium">FEATURES</a>
+                    <a href="#tips" class="text-white hover:text-red-500 transition-all duration-300 font-medium">TIPS</a>
+                    <a href="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-md font-bold transition-all duration-300 btn-hover">
+                        PLAY FREE
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white hover:text-red-500 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#game" class="text-white hover:text-red-500 transition-all duration-300 font-medium">PLAY NOW</a>
+                    <a href="#about" class="text-white hover:text-red-500 transition-all duration-300 font-medium">ABOUT</a>
+                    <a href="#features" class="text-white hover:text-red-500 transition-all duration-300 font-medium">FEATURES</a>
+                    <a href="#tips" class="text-white hover:text-red-500 transition-all duration-300 font-medium">TIPS</a>
+                    <a href="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-md font-bold transition-all duration-300 text-center btn-hover">
+                        PLAY FREE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 hero-gradient overflow-hidden">
+        <div class="grid-bg absolute inset-0 opacity-30"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="gaming-font text-5xl md:text-7xl text-white mb-6 leading-tight text-glow">
+                        VIOLENT<br>SURVIVORS
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-10 max-w-lg">
+                        Battle endless hordes of monsters, collect powerful upgrades, and be the last one standing in this heart-pounding survival action game.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#game" class="gaming-font bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center neo-brutalism">
+                            PLAY NOW
+                        </a>
+                        <a href="#features" class="gaming-font bg-transparent hover:bg-white/10 text-white border-2 border-white/20 px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center">
+                            FEATURES
+                        </a>
+                    </div>
+                    <div class="mt-10 flex items-center space-x-6">
+                        <div class="flex -space-x-2">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23FF4D4D'/%3E%3Ccircle cx='50' cy='35' r='20' fill='%23FFF'/%3E%3Ccircle cx='50' cy='80' r='30' fill='%23FFF'/%3E%3C/svg%3E" alt="User">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%234D79FF'/%3E%3Ccircle cx='50' cy='35' r='20' fill='%23FFF'/%3E%3Ccircle cx='50' cy='80' r='30' fill='%23FFF'/%3E%3C/svg%3E" alt="User">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%234DFF77'/%3E%3Ccircle cx='50' cy='35' r='20' fill='%23FFF'/%3E%3Ccircle cx='50' cy='80' r='30' fill='%23FFF'/%3E%3C/svg%3E" alt="User">
+                        </div>
+                        <div>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            </div>
+                            <p class="text-gray-400 text-sm">4.8/5 from 10,800+ players</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2 relative">
+                    <div class="relative">
+                        <div class="absolute -inset-1 bg-red-600 rounded-lg blur-lg opacity-50"></div>
+                        <div class="relative bg-gray-900 border border-red-600/30 rounded-lg overflow-hidden">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%23111'/%3E%3Ccircle cx='400' cy='250' r='150' fill='%23FF4D4D' opacity='0.7'/%3E%3Crect x='200' y='150' width='400' height='200' fill='%23333'/%3E%3Cpath d='M350,200 L450,250 L350,300 Z' fill='%23FFF'/%3E%3C/svg%3E" alt="Violent Survivors Gameplay" class="w-full h-auto rounded-lg">
+                            <a href="#game" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 transition-all duration-300 hover:bg-opacity-20">
+                                <div class="w-20 h-20 rounded-full bg-red-600 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -right-4 -bottom-4 bg-gray-800 rounded-lg p-3 border border-gray-700">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <p class="text-sm font-medium text-white">1,246 players online now</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-1/4 left-10 w-20 h-20 bg-red-500 rounded-full opacity-10 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-10 w-32 h-32 bg-blue-500 rounded-full opacity-10 animate-pulse delay-700"></div>
+    </section>
+
+    <!-- Game Section -->
+    <section id="game" class="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+        <div class="grid-bg absolute inset-0 opacity-20"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="gaming-font text-4xl md:text-5xl text-white mb-6 text-glow">PLAY VIOLENT SURVIVORS NOW</h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">Join thousands of players worldwide in this fast-paced battle for survival. No downloads required - play instantly in your browser!</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-blue-600 rounded-xl blur-lg opacity-70"></div>
+                    <div class="relative bg-gray-900 rounded-xl overflow-hidden border border-gray-800">
+                        <div class="aspect-w-16 aspect-h-9 bg-black">
+                            <div class="p-10 flex flex-col items-center justify-center text-center">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%23111'/%3E%3Ctext x='400' y='200' font-family='Arial' font-size='60' fill='%23FF4D4D' text-anchor='middle' dominant-baseline='middle'%3EVIOLENT SURVIVORS%3C/text%3E%3Ccircle cx='200' cy='200' r='50' fill='%23FF4D4D' opacity='0.7'/%3E%3Ccircle cx='600' cy='200' r='50' fill='%234D79FF' opacity='0.7'/%3E%3C/svg%3E" alt="Violent Survivors Game" class="w-full max-w-md mb-8">
+                                
+                                <h3 class="gaming-font text-3xl text-white mb-4">READY TO SURVIVE?</h3>
+                                <p class="text-gray-400 mb-8 max-w-md">
+                                    Battle endless hordes of monsters, collect powerful upgrades, and see how long you can survive in this thrilling action game!
+                                </p>
+                                
+                                <a href="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" target="_blank" class="gaming-font bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-10 py-4 rounded-md font-bold text-xl transition-all duration-300 transform hover:scale-105 inline-block neo-brutalism">
+                                    <i class="fas fa-play mr-2"></i> PLAY FULL SCREEN
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 flex justify-center">
+                    <div class="bg-gray-800 rounded-full px-6 py-3 flex items-center space-x-2">
+                        <i class="fas fa-info-circle text-blue-400"></i>
+                        <p class="text-sm text-gray-300">For the best experience, play in full-screen mode</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Screenshots Section -->
+    <section class="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+        <div class="grid-bg absolute inset-0 opacity-20"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="gaming-font text-4xl md:text-5xl text-white mb-6 text-glow-blue">GAME SCREENSHOTS</h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">Take a glimpse into the chaotic world of Violent Survivors</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Screenshot 1 -->
+                <div class="card-game group relative overflow-hidden">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
+                    <div class="relative bg-black rounded-lg overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23111'/%3E%3Crect x='0' y='0' width='800' height='450' fill='url(%23grad1)' opacity='0.3'/%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(239,68,68);stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:rgb(59,130,246);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='400' cy='225' r='150' fill='%23222'/%3E%3Cpath d='M300,170 C350,120 450,120 500,170 C550,220 550,320 500,370 C450,420 350,420 300,370 C250,320 250,220 300,170 Z' fill='%23FF4D4D' opacity='0.7'/%3E%3Ccircle cx='350' cy='200' r='15' fill='%23FFF'/%3E%3Ccircle cx='450' cy='200' r='15' fill='%23FFF'/%3E%3Cpath d='M350,270 Q400,300 450,270' stroke='%23FFF' stroke-width='5' fill='none'/%3E%3Cpath d='M320,160 L480,160 L480,390 L320,390 Z' stroke='%23333' stroke-width='2' fill='none' opacity='0.5'/%3E%3C/svg%3E" alt="Monster Character" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-5">
+                            <h3 class="gaming-font text-xl text-white mb-2 drop-shadow-md">Monster Rampage</h3>
+                            <p class="text-gray-300 text-sm">Face hordes of enemies with unique attack patterns</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Screenshot 2 -->
+                <div class="card-game group relative overflow-hidden">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
+                    <div class="relative bg-black rounded-lg overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23111'/%3E%3Crect x='0' y='0' width='800' height='450' fill='url(%23grad2)' opacity='0.3'/%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(59,130,246);stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:rgb(16,185,129);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cg transform='translate(400, 225)'%3E%3Ccircle cx='0' cy='0' r='150' fill='%23222'/%3E%3Ccircle cx='0' cy='0' r='120' fill='none' stroke='%233B82F6' stroke-width='2' opacity='0.5'/%3E%3Ccircle cx='0' cy='0' r='100' fill='none' stroke='%233B82F6' stroke-width='2' opacity='0.7'/%3E%3Ccircle cx='0' cy='0' r='80' fill='none' stroke='%233B82F6' stroke-width='2' opacity='0.9'/%3E%3Ccircle cx='0' cy='0' r='50' fill='%234D79FF' opacity='0.7'/%3E%3Ccircle cx='-80' cy='0' r='30' fill='%2310B981' opacity='0.7'/%3E%3Ccircle cx='80' cy='0' r='30' fill='%23FF4D4D' opacity='0.7'/%3E%3Ccircle cx='0' cy='-80' r='30' fill='%23FFCC00' opacity='0.7'/%3E%3Ccircle cx='0' cy='80' r='30' fill='%23A855F7' opacity='0.7'/%3E%3C/g%3E%3C/svg%3E" alt="Power-Up System" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-5">
+                            <h3 class="gaming-font text-xl text-white mb-2 drop-shadow-md">Power-Up Synergy</h3>
+                            <p class="text-gray-300 text-sm">Combine abilities for devastating attack combinations</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Screenshot 3 -->
+                <div class="card-game group relative overflow-hidden">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-yellow-600 to-red-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
+                    <div class="relative bg-black rounded-lg overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23111'/%3E%3Crect x='0' y='0' width='800' height='450' fill='url(%23grad3)' opacity='0.3'/%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(234,179,8);stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:rgb(239,68,68);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='400' cy='225' r='170' fill='%23222'/%3E%3Cpath d='M400,100 L500,180 L480,310 L320,310 L300,180 Z' fill='%23EAB308' opacity='0.6'/%3E%3Cpath d='M400,120 L480,185 L465,290 L335,290 L320,185 Z' fill='%23FF4D4D' opacity='0.7'/%3E%3Ccircle cx='375' cy='200' r='12' fill='%23FFF'/%3E%3Ccircle cx='425' cy='200' r='12' fill='%23FFF'/%3E%3Cpath d='M370,240 Q400,280 430,240' stroke='%23FFF' stroke-width='5' fill='none'/%3E%3Cpath d='M250,350 L260,200 L540,200 L550,350 Z' stroke='%23EAB308' stroke-width='3' fill='none' opacity='0.3'/%3E%3Cpath d='M300,350 L310,220 L490,220 L500,350 Z' stroke='%23EAB308' stroke-width='2' fill='none' opacity='0.5'/%3E%3C/svg%3E" alt="Epic Boss Battle" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-5">
+                            <h3 class="gaming-font text-xl text-white mb-2 drop-shadow-md">Epic Boss Battle</h3>
+                            <p class="text-gray-300 text-sm">Test your skills against formidable boss enemies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="py-20 bg-gray-900 relative overflow-hidden">
+        <div class="grid-bg absolute inset-0 opacity-20"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="gaming-font text-4xl md:text-5xl text-white mb-6 text-glow">SURVIVAL TIPS</h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">Master these strategies to extend your survival time and dominate the leaderboards</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Beginner Tips -->
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-seedling text-white text-2xl"></i>
+                        </div>
+                        <h3 class="gaming-font text-2xl text-white">FOR BEGINNERS</h3>
+                    </div>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex">
+                            <div class="text-green-400 mr-3"><i class="fas fa-check-circle"></i></div>
+                            <p class="text-gray-300">Focus on movement and dodging first - survival is your primary goal.</p>
+                        </li>
+                        <li class="flex">
+                            <div class="text-green-400 mr-3"><i class="fas fa-check-circle"></i></div>
+                            <p class="text-gray-300">Choose defensive power-ups early to extend your survival time.</p>
+                        </li>
+                        <li class="flex">
+                            <div class="text-green-400 mr-3"><i class="fas fa-check-circle"></i></div>
+                            <p class="text-gray-300">Don't rush into large groups - kite enemies around the map instead.</p>
+                        </li>
+                        <li class="flex">
+                            <div class="text-green-400 mr-3"><i class="fas fa-check-circle"></i></div>
+                            <p class="text-gray-300">Prioritize experience orbs to level up quickly and gain more power-ups.</p>
+                        </li>
+                        <li class="flex">
+                            <div class="text-green-400 mr-3"><i class="fas fa-check-circle"></i></div>
+                            <p class="text-gray-300">Learn each character's starting weapon before trying new ones.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Advanced Tips -->
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-crown text-white text-2xl"></i>
+                        </div>
+                        <h3 class="gaming-font text-2xl text-white">ADVANCED STRATEGIES</h3>
+                    </div>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex">
+                            <div class="text-red-400 mr-3"><i class="fas fa-check-circle"></i></div>
+                            <p class="text-gray-300">Create synergies between weapons and passive items for maximum effect.</p>
+                        </li>
+                        <li class="flex">
+                            <div class="text-red-400 mr-3"><i class="fas fa-check-circle"></i></div>
+                            <p class="text-gray-300">On boss levels, focus entirely on dodging patterns before attacking.</p>
+                        </li>
+                        <li class="flex">
+                            <div class="text-red-400 mr-3"><i class="fas fa-check-circle"></i></div>
+                            <p class="text-gray-300">Use environmental obstacles to funnel enemies into chokepoints.</p>
+                        </li>
+                        <li class="flex">
+                            <div class="text-red-400 mr-3"><i class="fas fa-check-circle"></i></div>
+                            <p class="text-gray-300">When choosing power-ups, consider your current build over the rarest option.</p>
+                        </li>
+                        <li class="flex">
+                            <div class="text-red-400 mr-3"><i class="fas fa-check-circle"></i></div>
+                            <p class="text-gray-300">Use area-of-effect attacks to clear paths when surrounded, then reposition.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-red-900 to-purple-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute inset-0" style="background: radial-gradient(circle at center, transparent 0%, black 100%), url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'20\' height=\'20\' viewBox=\'0 0 20 20\'%3E%3Cpath fill=\'%23ffffff\' fill-opacity=\'0.05\' d=\'M0,0 L20,0 L20,20 L0,20 L0,0 Z M1,1 L1,19 L19,19 L19,1 L1,1 Z\'/%3E%3C/svg%3E')"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="gaming-font text-4xl md:text-5xl text-white mb-6 text-glow">READY TO TEST YOUR SURVIVAL SKILLS?</h2>
+                <p class="text-xl text-gray-300 mb-10">Join thousands of players worldwide and see how long you can last against the monster hordes!</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" target="_blank" class="gaming-font bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-md font-bold text-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center neo-brutalism">
+                        <i class="fas fa-play mr-2"></i> PLAY NOW
+                    </a>
+                    <a href="#features" class="gaming-font bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-md font-bold text-xl transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-info-circle mr-2"></i> LEARN MORE
+                    </a>
+                </div>
+                
+                <div class="mt-12 flex justify-center">
+                    <div class="flex items-center space-x-2">
+                        <p class="text-white font-medium">Share with friends:</p>
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-all duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition-all duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white hover:bg-purple-700 transition-all duration-300">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-red-600 rounded-md flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">VS</span>
+                        </div>
+                        <span class="gaming-font text-2xl text-white text-glow">VIOLENT SURVIVORS</span>
+                    </a>
+                    <p class="text-gray-500 mt-2">© 2025 violentsurvivors.com. All rights reserved.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="gaming-font text-white mb-4 text-lg">GAME</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#game" class="text-gray-400 hover:text-white transition-all duration-300">Play Now</a></li>
+                            <li><a href="#features" class="text-gray-400 hover:text-white transition-all duration-300">Features</a></li>
+                            <li><a href="#tips" class="text-gray-400 hover:text-white transition-all duration-300">Tips & Tricks</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="gaming-font text-white mb-4 text-lg">COMMUNITY</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300">Discord</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300">Forum</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300">Leaderboards</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="gaming-font text-white mb-4 text-lg">SUPPORT</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300">Help Center</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300">Contact Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="gaming-font text-white mb-4 text-lg">LEGAL</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all duration-300">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-600">Designed for monster slaying enthusiasts worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+        <div class="grid-bg absolute inset-0 opacity-20"></div>
+        <div class="absolute right-0 top-0 w-96 h-96 bg-red-600 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute left-0 bottom-0 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl opacity-20"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="gaming-font text-4xl md:text-5xl text-white mb-6 text-glow-blue">GAME FEATURES</h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">Discover what makes Violent Survivors an addictive and thrilling gaming experience</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card rounded-xl p-6 h-full">
+                    <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="gaming-font text-xl text-white mb-4">FAST-PACED ACTION</h3>
+                    <p class="text-gray-400">Experience non-stop thrills with waves of enemies, explosive weapons, and intense survival gameplay that keeps you on the edge of your seat.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card rounded-xl p-6 h-full">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-user-astronaut text-white text-2xl"></i>
+                    </div>
+                    <h3 class="gaming-font text-xl text-white mb-4">MULTIPLE CHARACTERS</h3>
+                    <p class="text-gray-400">Choose from a roster of unique survivors, each with their own abilities and playstyles to match your strategy and dominate the battlefield.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card rounded-xl p-6 h-full">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-fire-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="gaming-font text-xl text-white mb-4">POWER-UP SYSTEM</h3>
+                    <p class="text-gray-400">Collect and upgrade powerful abilities throughout each run, creating unique combinations that can turn you into an unstoppable force.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card rounded-xl p-6 h-full">
+                    <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-random text-white text-2xl"></i>
+                    </div>
+                    <h3 class="gaming-font text-xl text-white mb-4">PROCEDURAL GENERATION</h3>
+                    <p class="text-gray-400">Every playthrough is unique with randomly generated maps, enemy patterns, and power-up drops for endless replayability.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card rounded-xl p-6 h-full">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="gaming-font text-xl text-white mb-4">PROGRESSION SYSTEM</h3>
+                    <p class="text-gray-400">Level up your characters, unlock new content, and become stronger with each game as you master the art of survival.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card rounded-xl p-6 h-full">
+                    <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-700 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-skull text-white text-2xl"></i>
+                    </div>
+                    <h3 class="gaming-font text-xl text-white mb-4">EPIC BOSS BATTLES</h3>
+                    <p class="text-gray-400">Face terrifying boss monsters with unique attack patterns and weaknesses that will test your skills to the limit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black relative overflow-hidden">
+        <div class="grid-bg absolute inset-0 opacity-20"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-1/2">
+                    <div class="relative">
+                        <div class="absolute -inset-1 bg-red-600 rounded-xl blur-lg opacity-30"></div>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%23222'/%3E%3Cpath d='M400,100 L600,400 L500,500 L300,500 L200,400 Z' fill='%23FF4D4D'/%3E%3Ccircle cx='400' cy='250' r='100' fill='%23333'/%3E%3Ccircle cx='350' cy='225' r='25' fill='%23FFF'/%3E%3Ccircle cx='450' cy='225' r='25' fill='%23FFF'/%3E%3Cpath d='M350,300 Q400,350 450,300' stroke='%23FFF' stroke-width='10' fill='none'/%3E%3C/svg%3E" alt="Violent Survivors Character" class="relative w-full rounded-xl">
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2">
+                    <h2 class="gaming-font text-4xl text-white mb-6 text-glow">ABOUT THE GAME</h2>
+                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                        Violent Survivors is an adrenaline-pumping monster survival game where you face endless waves of dangerous creatures in a post-apocalyptic world. Your mission is simple yet challenging: fight, strategize, and evolve your character to survive as long as possible against increasingly difficult enemy hordes.
+                    </p>
+                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                        With a wide variety of weapons, power-ups, and character abilities to unlock, each playthrough offers a unique experience. The game features procedurally generated maps and enemy spawn patterns, ensuring no two games are exactly alike.
+                    </p>
+                    <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+                        Whether you're looking for a quick gaming session or an extended survival challenge, Violent Survivors offers accessible yet deep gameplay that will keep you coming back for "just one more run."
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#game" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-bold transition-all duration-300 flex items-center justify-center">
+                            <i class="fas fa-play mr-2"></i> Play Now
+                        </a>
+                        <a href="#tips" class="bg-transparent hover:bg-white/10 text-white border border-white/20 px-6 py-3 rounded-md font-bold transition-all duration-300 flex items-center justify-center">
+                            <i class="fas fa-lightbulb mr-2"></i> Game Tips
+                        </a>
+                    </div>
